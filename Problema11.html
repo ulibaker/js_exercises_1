@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>PROBLEMA 11</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/nav.css" rel="stylesheet" type="text/css">
+<head>
+	<header>
+        <h1 style="text-align: center;font-size: 30px;">Problemas de Javascript, Clase 11:00 - 12:00, 20550195</h1>
+        </div>
+    </header>
+    <nav>
+        <center>
+            <div id="header">
+                <ul class="nav">
+                    <li><a href="Problema3.html">Problema 3</a></li>					
+                    <li><a href="Problema6.html">Problema 6</a></li>
+                    <li><a href="Problema7.html">Problema 7</a></li>
+					<li><a href="Problema9.html">Problema 9</a></li>
+					<li><a href="Problema11.html">Problema 11</a></li>
+					<li><a href="Problema14.html">Problema 14</a></li>
+					<li><a href="Problema15.html">Problema 15</a></li>
+					<li><a href="Problema16.html">Problema 16</a></li>
+                    <li><a href="Problema17.html">Problema 17</a></li>
+					<li><a href="Problema18.html">Problema 18</a></li>
+                </ul>
+            </div>
+        </center>
+        <br>
+    </nav>
+</head>
+<body>
+	<br><br>
+	<h1>Divisores.</h1>
+	<p>Realizar un subprograma que calcule la suma de los divisores de n distintos de n.
+	Análisis del problema.
+	Para obtener los divisores del número entero n, será preciso hacer un bucle en el que un contador se irá decrementando desde n-1 hasta 1. Por cada iteración, se comprobará si el contador es divisor de n. Como el primer
+	divisor que podemos encontrar será n/2, el valor inicial del contador podrá ser n div 2.
+	El tipo de subprograma deberá ser una función, a la que pasaríamos como parámetro de entrada el número n.
+
+	</p>
+	<p>introduzca n</p>
+	<input id="n"></input>
+	<button onclick="divDeN()" id="btn">Calcular</button>
+	<script>
+		function divDeN(){
+			var x = parseFloat(document.getElementById("n").value);
+			var c = 0;
+			for(var i = 2; i<x ; i++) {
+				if(x%i==0) {
+					c++;
+				}
+			}
+			alert("Resutado: "+c);
+		}
+	</script>
+</body>
+</html>

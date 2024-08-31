@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>PROBLEMA 7</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/nav.css" rel="stylesheet" type="text/css">
+<head>
+	<header>
+        <h1 style="text-align: center;font-size: 30px;">Problemas de Javascript, Clase 11:00 - 12:00, 20550195</h1>
+        </div>
+    </header>
+    <nav>
+        <center>
+            <div id="header">
+                <ul class="nav">
+                    <li><a href="Problema3.html">Problema 3</a></li>					
+                    <li><a href="Problema6.html">Problema 6</a></li>
+                    <li><a href="Problema7.html">Problema 7</a></li>
+					<li><a href="Problema9.html">Problema 9</a></li>
+					<li><a href="Problema11.html">Problema 11</a></li>
+					<li><a href="Problema14.html">Problema 14</a></li>
+					<li><a href="Problema15.html">Problema 15</a></li>
+					<li><a href="Problema16.html">Problema 16</a></li>
+                    <li><a href="Problema17.html">Problema 17</a></li>
+					<li><a href="Problema18.html">Problema 18</a></li>
+                </ul>
+            </div>
+        </center>
+        <br>
+    </nav>
+</head>
+<body>
+	<br><br>
+	<h1>Algoritmo de euclides.</h1>
+	<p>Diseñar una función que permita obtener el máximo común divisor de dos números mediante el algoritmo de Euclides.
+	Análisis del problema
+	Para obtener el máximo común divisor de dos números enteros positivos a y b según el algoritmo de Euclides,
+	se debe ejecutar un bucle que divida a entre b. Si el resto es 0, b será el divisor; en caso contrario, a tomará el valor de b y b el del resto de
+	la división anterior. El bucle finalizará cuando el resto sea 0, es decir, cuando a sea divisible entre b.
+	</p>
+	<p>introduzca a</p>
+	<input id="a"></input>
+	<p>introduzca b</p>
+	<input id="b"></input>
+	<button onclick="euclid()" id="btn">Calcular</button>
+	<script>
+		function euclid() {
+			var a = parseFloat(document.getElementById("a").value);
+			var b = parseFloat(document.getElementById("b").value);
+			while(b>0){
+         
+			    if(a>b){
+				    a=a-b;
+			    }
+			    else{
+				    b=b-a;
+			    }
+			}
+			alert("Resutado: "+a);
+		}
+	</script>
+</body>
+</html>

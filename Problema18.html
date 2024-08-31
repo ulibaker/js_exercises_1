@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>PROBLEMA 18</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/nav.css" rel="stylesheet" type="text/css">
+<head>
+	<header>
+        <h1 style="text-align: center;font-size: 30px;">Problemas de Javascript, Clase 11:00 - 12:00, 20550195</h1>
+        </div>
+    </header>
+    <nav>
+        <center>
+            <div id="header">
+                <ul class="nav">
+                    <li><a href="Problema3.html">Problema 3</a></li>					
+                    <li><a href="Problema6.html">Problema 6</a></li>
+                    <li><a href="Problema7.html">Problema 7</a></li>
+					<li><a href="Problema9.html">Problema 9</a></li>
+					<li><a href="Problema11.html">Problema 11</a></li>
+					<li><a href="Problema14.html">Problema 14</a></li>
+					<li><a href="Problema15.html">Problema 15</a></li>
+					<li><a href="Problema16.html">Problema 16</a></li>
+                    <li><a href="Problema17.html">Problema 17</a></li>
+					<li><a href="Problema18.html">Problema 18</a></li>
+                </ul>
+            </div>
+        </center>
+        <br>
+    </nav>
+</head>
+<body>
+	<br><br>
+	<h1>Integrales.</h1>	
+	<p>Escribir una función, INTEGRAL, que devuelva el área del recinto formado por el eje de las X,
+	las rectas   x=a    y      x=b y el arco de curva correspondiente a una función continua, recibida
+	como parámetro, con valores positivos en el intervalo considerado.
+	Análisis de problema
+	La función integral dividirá el intervalo [a,b] en n subintervalos y considerará n rectángulos con esas bases y cuyas alturas sean el valor de la función recibida como parámetro, f(x), en el punto medio de los subintervalos.
+	La suma de las áreas de todos estos rectángulos constituirá el valor devuelto por integral.
+	</p>
+	<p>La función es f(x) = x^2</p>
+	<p>introduzca a</p>
+	<input id="a"></input>
+	<p>introduzca b</p>
+	<input id="b"></input>
+	<p>introduzca n</p>
+	<input id="n"></input>
+	<button onclick="integral()" id="btn">Calcular</button>
+	<script>
+		function integral() {
+			var a = parseFloat(document.getElementById("a").value);
+			var b = parseFloat(document.getElementById("b").value);
+			var n = parseFloat(document.getElementById("n").value);
+			var x = (b-a)/n;
+			var total = 0;
+			
+			for (var i = 0; i < n; i++) {
+				total = (total+(a*x));
+				a=a+x;		
+			}
+			alert("Resutado: "+total);
+		}
+	</script>
+</body>
+</html>

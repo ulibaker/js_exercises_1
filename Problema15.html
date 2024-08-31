@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>PROBLEMA 15</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/nav.css" rel="stylesheet" type="text/css">
+<head>
+	<header>
+        <h1 style="text-align: center;font-size: 30px;">Problemas de Javascript, Clase 11:00 - 12:00, 20550195</h1>
+        </div>
+    </header>
+    <nav>
+        <center>
+            <div id="header">
+                <ul class="nav">
+                    <li><a href="Problema3.html">Problema 3</a></li>					
+                    <li><a href="Problema6.html">Problema 6</a></li>
+                    <li><a href="Problema7.html">Problema 7</a></li>
+					<li><a href="Problema9.html">Problema 9</a></li>
+					<li><a href="Problema11.html">Problema 11</a></li>
+					<li><a href="Problema14.html">Problema 14</a></li>
+					<li><a href="Problema15.html">Problema 15</a></li>
+					<li><a href="Problema16.html">Problema 16</a></li>
+                    <li><a href="Problema17.html">Problema 17</a></li>
+					<li><a href="Problema18.html">Problema 18</a></li>
+                </ul>
+            </div>
+        </center>
+        <br>
+    </nav>
+</head>
+<body>
+	<br><br>
+	<h1>ex, senx, cosx</h1>
+	<p>Implemente tres funciones que permitan averiguar los valores de ex, cos(x) y sen(x)
+	</p>
+	<p>introduzca x</p>
+	<input id="x"></input>
+	<button onclick="funwx()" id="btn">Calcular</button>
+	<script>
+		function funwx() {
+			var x = parseFloat(document.getElementById("x").value);
+			var e=Math.exp(x);
+			var s=Math.sin(x);
+			var c=Math.cos(x);
+			
+			alert("ex "+e+", sinx "+s+", cosx"+c);
+		}
+	</script>
+</body>
+</html>

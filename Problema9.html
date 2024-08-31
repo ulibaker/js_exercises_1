@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>PROBLEMA 9</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/nav.css" rel="stylesheet" type="text/css">
+<head>
+	<header>
+        <h1 style="text-align: center;font-size: 30px;">Problemas de Javascript, Clase 11:00 - 12:00, 20550195</h1>
+        </div>
+    </header>
+    <nav>
+        <center>
+            <div id="header">
+                <ul class="nav">
+                    <li><a href="Problema3.html">Problema 3</a></li>					
+                    <li><a href="Problema6.html">Problema 6</a></li>
+                    <li><a href="Problema7.html">Problema 7</a></li>
+					<li><a href="Problema9.html">Problema 9</a></li>
+					<li><a href="Problema11.html">Problema 11</a></li>
+					<li><a href="Problema14.html">Problema 14</a></li>
+					<li><a href="Problema15.html">Problema 15</a></li>
+					<li><a href="Problema16.html">Problema 16</a></li>
+                    <li><a href="Problema17.html">Problema 17</a></li>
+					<li><a href="Problema18.html">Problema 18</a></li>
+                </ul>
+            </div>
+        </center>
+        <br>
+    </nav>
+</head>
+<body>
+	<br><br>
+	<h1>x^y.</h1>
+	<p>Implementar una función que permita hallar el valor de X^y, siendo X un número real e y un entero.
+	Análisis del problema
+	Se trata de una función similar a la del factorial, pues se trata de acumular multiplicaciones, pues debemos multiplicar 
+	X por sí mismo y veces. Si y es negativo, X^y es igual a su inversa.
+	</p>
+	<p>introduzca a</p>
+	<input id="a"></input>
+	<p>introduzca b</p>
+	<input id="b"></input>
+	<button onclick="elevarYVeces()" id="btn">Calcular</button>
+	<script>
+		function elevarYVeces() {
+			var x = parseFloat(document.getElementById("a").value);
+			var y = parseFloat(document.getElementById("b").value);
+			
+			var r = x;
+			if(y>0) {
+				for(var i=0; i<y-1; i++) {
+					r=r*x;
+				}
+			}
+			if(y<0) {
+				y = y-y-y;
+				for(var i=0; i<y-1; i++) {
+					r=r*x;
+				}
+				r=1/r;
+			}
+			if(y==0) {
+				r=1;
+			}
+			alert("Resutado: "+r);
+		}
+	</script>
+</body>
+</html>
